@@ -1,6 +1,9 @@
 stacklates.com
 ==============
 
+stacklates.com tries to provide a comfortable and easy to use platform
+to share and work with templates for Heat.
+
 Frameworks
 ----------
 
