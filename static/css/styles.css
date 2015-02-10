@@ -8,13 +8,66 @@ body {
   font: 300 20px/1.4 Roboto, 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
-.jumbotron {
+/* Jumbotron based on prism-coy
+ * http://prismjs.com/download.html?themes=prism-coy */
+
+div[class="jumbotron"] {
   max-width: 550px;
   padding: 20px;
   margin: 0px;
+  color: black;
   text-align: justify;
+
 }
 
+div[class="jumbotron"] {
+  position: relative;
+  margin: .5em 0;
+  -webkit-box-shadow: -1px 0px 0px 0px #dfdfdf, 0px 0px 0px 1px #dfdfdf;
+  -moz-box-shadow: -1px 0px 0px 0px #dfdfdf, 0px 0px 0px 1px #dfdfdf;
+  box-shadow: -1px 0px 0px 0px #dfdfdf, 0px 0px 0px 1px #dfdfdf;
+  background-color: #fdfdfd;
+  overflow: visible;
+  max-height: 30em;
+}
+
+div[class="jumbotron"] {
+  background-color: #fdfdfd;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 1em;
+}
+
+div[class="jumbotron"]:before,
+div[class="jumbotron"]:after {
+  content: '';
+  z-index: -2;
+  display: block;
+  position: absolute;
+  bottom: 0.75em;
+  left: 0.18em;
+  width: 40%;
+  height: 20%;
+  -webkit-box-shadow: 0px 13px 8px #979797;
+  -moz-box-shadow: 0px 13px 8px #979797;
+  box-shadow: 0px 13px 8px #979797;
+  -webkit-transform: rotate(-2deg);
+  -moz-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  -o-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+}
+
+div[class="jumbotron"]:after {
+  right: 0.75em;
+  left: auto;
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
 
 /*
  *  * Global add-ons
