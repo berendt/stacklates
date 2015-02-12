@@ -1,0 +1,22 @@
+- hosts: all
+  sudo: True
+
+  tasks:
+  - shell: curl -sL https://deb.nodesource.com/setup | bash -
+    args:
+      creates: /etc/apt/sources.list.d/nodesource.list
+  - apt: update-cache=yes upgrade=yes
+  - apt: name=mongodb state=latest
+  - apt: name=python-pymongo state=latest
+  - service: name=mongodb state=started enabled=yes
+  - wait_for: port=27017 delay=2
+  - mongodb_user: database=stacklates
+                  name=stacklates
+                  password=secretsecret
+                  state=present
+  - apt: name=git state=latest
+  - apt: name=nodejs state=latest update-cache=yes
+  - npm: name=npm global=yes state=latest
+  - npm: name=bower global=yes state=latest
+  - npm: name=grunt-cli global=yes state=latest
+  - npm: name=mean-cli global=yes state=latest
